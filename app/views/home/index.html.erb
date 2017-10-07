@@ -1,0 +1,9 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+            <li class="nav-item" >
+              <%= link_to 'LOGIN'.html_safe, new_user_session_path,class: 'nav-link'%>
+            </li>
+            <li class="nav-item">
+              <%= link_to "REGISTER", new_user_registration_path,class: 'nav-link'  %>
+            </li>
+            <%= link_to ' Logout'.html_safe, destroy_user_session_path, method: :delete, :class => 'dropdown-item' if user_signed_in? %>
